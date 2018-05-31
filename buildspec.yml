@@ -2,15 +2,12 @@ version: 0.2
 phases:
   install:
      commands:
-      - npm install -g react-static
+      - npm install
   pre_build:
     commands:
   build:
     commands:
-      - ls -a
-      - cd $CODEBUILD_SRC_DIR
-      - ls -a
       - react-static build
   post_build:
     commands:
-      - cd $CODEBUILD_SRC_DIR; aws s3 sync --delete dist/ "s3://www.codekopp.com"
+      - aws s3 sync --delete dist/ "s3://www.codekopp.com"
