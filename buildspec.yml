@@ -7,8 +7,7 @@ phases:
     commands:
   build:
     commands:
-      - cd $CODEBUILD_SRC_DIR; npm run build
+      - cd $CODEBUILD_SRC_DIR; react-static build
   post_build:
     commands:
-      - cd $CODEBUILD_SRC_DIR/dist; zip -r ../p
-      - aws s3 sync --delete dist/ "s3://www.codekopp.com"
+      - cd $CODEBUILD_SRC_DIR; aws s3 sync --delete dist/ "s3://www.codekopp.com"
