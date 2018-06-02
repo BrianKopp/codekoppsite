@@ -2,14 +2,17 @@ version: 0.2
 phases:
   install:
      commands:
-      - npm install -g
+      - npm install
       - ls -a
-      - npm list -g --depth=0
+      - npm list --depth=0
+      - ls /usr/local/lib - a
   pre_build:
     commands:
+    - ln -s ../node_modules node_modules
   build:
     commands:
-      - react-static build
+      # - react-static build
+      - npm run build
   post_build:
     commands:
       - aws s3 sync --delete dist/ "s3://www.codekopp.com"
