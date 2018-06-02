@@ -4,7 +4,7 @@ import { ServerStyleSheet } from 'styled-components'
 
 export default {
   getSiteData: () => ({
-    title: 'React Static',
+    title: 'Code Kopp',
   }),
   getRoutes: async () => {
     const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts')
