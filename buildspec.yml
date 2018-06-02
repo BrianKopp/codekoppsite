@@ -4,7 +4,7 @@ phases:
      commands:
       - npm install
       - ls -a
-      - npm list --depth=0
+      #- npm list --depth=0
       - npm -v
       - nodejs -v
   pre_build:
