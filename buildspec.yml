@@ -10,4 +10,4 @@ phases:
       - npm run build
   post_build:
     commands:
-      #- aws s3 sync --delete dist/ "s3://www.codekopp.com"
+      - aws s3 sync --delete dist/ "s3://www.codekopp.com"
