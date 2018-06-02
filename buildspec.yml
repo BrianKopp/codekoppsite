@@ -10,7 +10,8 @@ phases:
     commands:
   build:
     commands:
-      - react-static build
+      - npm run build
+      #- react-static build
   post_build:
     commands:
       - aws s3 sync --delete dist/ "s3://www.codekopp.com"
