@@ -10,7 +10,6 @@ phases:
   pre_build:
     commands:
     - ln -s ../node_modules node_modules
-    - mkdir dist
   build:
     commands:
       # - react-static build
