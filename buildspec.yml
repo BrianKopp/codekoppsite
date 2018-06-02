@@ -5,9 +5,12 @@ phases:
       - npm install
       - ls -a
       - npm list --depth=0
+      - npm -v
+      - nodejs -v
   pre_build:
     commands:
     - ln -s ../node_modules node_modules
+    - mkdir dist
   build:
     commands:
       # - react-static build
