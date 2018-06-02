@@ -3,7 +3,6 @@ phases:
   install:
      commands:
       - npm install -g
-      - npm install -g --only-dev
       - ls -a
       - npm list -g --depth=0
   pre_build:
