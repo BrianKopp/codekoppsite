@@ -5,7 +5,6 @@ phases:
       - npm install
       - ls -a
       - npm list --depth=0
-      - ls /usr/local/lib - a
   pre_build:
     commands:
     - ln -s ../node_modules node_modules
