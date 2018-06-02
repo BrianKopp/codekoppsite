@@ -2,10 +2,10 @@ version: 0.2
 phases:
   install:
      commands:
-      - npm install
+      - npm install -g
+      - npm install -g --only-dev
   pre_build:
     commands:
-      - ln -s ../node_modules node_modules
   build:
     commands:
       - react-static build
