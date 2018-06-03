@@ -5,7 +5,11 @@ phases:
     - npm install
   pre_build:
     commands:
+    - ls
     - aws s3 cp s3://codekoppblogposts ../content --recursive
+    - ls
+    - ls content
+    - ls src
   build:
     commands:
       - npm run build
