@@ -40,7 +40,7 @@ export default {
           path: `post/${data.id}`,
           component: 'src/containers/Post',
           getData: () => ({
-            contents
+            data, contents
           }),
         })),
       },
