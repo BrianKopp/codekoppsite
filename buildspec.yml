@@ -6,7 +6,7 @@ phases:
   pre_build:
     commands:
     - ls
-    - aws s3 cp s3://codekoppblogposts ../content --recursive
+    - aws s3 cp s3://codekoppblogposts ./content --recursive
     - ls
     - ls content
     - ls src
