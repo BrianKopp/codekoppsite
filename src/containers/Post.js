@@ -2,11 +2,10 @@ import React from 'react'
 import { withRouteData, Link } from 'react-static'
 //
 
-export default withRouteData(({ post }) => (
+export default withRouteData(({ contents }) => (
   <div>
     <Link to="/blog/">{'<'} Back</Link>
     <br />
-    <h3>{post.title}</h3>
-    <p>{post.body}</p>
+    <div dangerouslySetInnerHTML={{ __html: contents }} />
   </div>
 ))

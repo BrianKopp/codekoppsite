@@ -3,15 +3,15 @@ import React from 'react'
 import { withRouteData, Link } from 'react-static'
 //
 
-export default withRouteData(({ posts }) => (
+export default withRouteData(({ data }) => (
   <div>
     <h1>It's blog time.</h1>
     <br />
     All Posts:
     <ul>
-      {posts.map(post => (
-        <li key={post.id}>
-          <Link to={`/blog/post/${post.id}/`}>{post.title}</Link>
+      {data.map(component => (
+        <li key={component.id}>
+          <Link to={`/blog/post/${component.id}/`}>{component.title}</Link>
         </li>
       ))}
     </ul>
