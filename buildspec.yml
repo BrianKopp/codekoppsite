@@ -10,4 +10,4 @@ phases:
       - npm run build
   post_build:
     commands:
-      - if [[ "$CODEBUILD_BUILD_SUCCEEDING" == "1" ]]; then aws s3 sync --delete dist/ "s3://www.codekopp.com"; fi
+      - if [ "$CODEBUILD_BUILD_SUCCEEDING" == "1" ]; then aws s3 sync --delete dist/ "s3://www.codekopp.com"; fi
